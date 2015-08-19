@@ -1,0 +1,15 @@
+.siteorigin-panels-builder .so-rows-container .so-row-container .so-cells .cell .widgets-container .so-widget small {
+  visibility: hidden;
+}
+
+
+#acf-group_55d1a53d54d85,
+.hide,
+.so-panels-dialog .so-title-bar a.so-previous,
+.so-panels-dialog .so-title-bar a.so-next,
+.so-duplicate,
+.so-live-editor,
+.so-prebuilt-add,
+div[data-name="layout_element_id"] {
+  display: none !important;
+}
