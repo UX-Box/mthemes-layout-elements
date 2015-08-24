@@ -2,6 +2,18 @@
 
 (function ($) {
 
+  if (!window._) {
+    return
+  }
+
+  if (!window.Backbone) {
+    return
+  }
+
+  if(!window.location.pathname.match(/post\.php/)) {
+    return
+  }
+
   var events          = _.extend({}, Backbone.Events),
       acfFieldGroupId = 'acf-group_55d1a53d54d85',
       $wpEditor,
@@ -83,6 +95,13 @@
     $wpEditorDisplay = $('.so-switch-to-standard')
     $acfFieldGroup   = $(['#', acfFieldGroupId].join(''))
     $acfAddElement   = $acfFieldGroup.find(['.acf-flexible-content > ul.acf-hl a.acf-fc-add'].join(''))
+
+    // test acf
+
+    if (!window.acf) {
+      console.warn('Mountain Themes Layout Elements requires advanced custom fields pro.')
+      return
+    }
 
     toggleLayoutElementsFieldGroup()
     parseWidgetsAndFields()

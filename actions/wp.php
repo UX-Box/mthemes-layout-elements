@@ -42,3 +42,25 @@ function mthemes_admin_enqueue_scripts () {
 }
 
 add_action('admin_enqueue_scripts', 'mthemes_admin_enqueue_scripts');
+
+
+// requirements notices
+
+function mthemes_layout_elements_admin_notices () {
+  $acf_active = is_plugin_active('advanced-custom-fields-pro/acf.php');
+  $sop_active = is_plugin_active('siteorigin-panels/siteorigin-panels.php');
+
+  if (!$acf_active) {
+    ?>
+    <div class="error"><p><?php echo __('Mountain Themes Layout Elements requires Advanced Custom Fielfd Pro', 'mthemes') ?></p></div>
+    <?php
+  }
+
+  if (!$sop_active) {
+    ?>
+    <div class="error"><p><?php echo __('Mountain Themes Layout Elements requires Site Origin Page Builder', 'mthemes') ?></p></div>
+    <?php
+  }
+}
+
+add_action('admin_notices', 'mthemes_layout_elements_admin_notices' );
