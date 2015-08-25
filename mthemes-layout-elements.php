@@ -28,11 +28,3 @@ require_once plugin_dir_path(__FILE__) . 'actions/wp.php';
 require_once plugin_dir_path(__FILE__) . 'utilities/functions.php';
 require_once plugin_dir_path(__FILE__) . 'widgets/mthemes-widget.php';
 require_once plugin_dir_path(__FILE__) . 'widgets/mthemes-image-widget.php';
-
-// activation
-
-function mthemes_layout_elements_activation () {
-  
-}
-
-register_activation_hook ( __FILE__ , 'mthemes_layout_elements_activation' );

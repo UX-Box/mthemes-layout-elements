@@ -30,9 +30,11 @@ class Mthemes_Widget extends WP_Widget {
       $data         = get_field('layout_elements');
       $data_element = null;
 
-      foreach ($data as $layout_element_data) {
-        if(is_array($layout_element_data) and !empty($layout_element_data['layout_element_id']) and $layout_element_data['layout_element_id'] == $instance['layout_element_id']) {
-          $data_element = $layout_element_data;
+      if(is_array($data)){
+        foreach ($data as $layout_element_data) {
+          if(is_array($layout_element_data) and !empty($layout_element_data['layout_element_id']) and $layout_element_data['layout_element_id'] == $instance['layout_element_id']) {
+            $data_element = $layout_element_data;
+          }
         }
       }
 

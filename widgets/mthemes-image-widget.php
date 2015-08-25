@@ -1,6 +1,5 @@
 <?php 
 class Mthemes_Image_Widget  extends Mthemes_Widget {
-  public $type = "image";
 
   public function __construct() {
     parent::__construct(
